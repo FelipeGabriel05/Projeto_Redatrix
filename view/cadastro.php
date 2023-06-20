@@ -15,7 +15,7 @@
         <form action="../controller/insert.php" method="post" class="form_cadastro">
             <label for="nome"><input type="text" name="nome" id="nome" required placeholder="Digite o seu nome"></label>
             <label for="email"><input type="email" name="email" id="email" required placeholder="Digite o seu email"></label>
-            <label for="senha"><input type="password" name="senha" id="senha" required placeholder="Digite a sua senha"></label>
+            <label for="senha"><input type="password" name="senha" id="senha" minlength="8" required placeholder="Digite a sua senha"></label>
             <button type="submit" name="ok" class="sendBtn">Cadastrar</button>
         </form>
         <p>Já possui uma conta? <a href="login.php">Fazer login</a></p>
