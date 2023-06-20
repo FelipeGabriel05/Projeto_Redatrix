@@ -21,7 +21,7 @@ SET time_zone = "+00:00";
 --
 -- Database: `projeto_redacao`
 --
-
+CREATE DATABASE `projeto_redacao`;
 -- --------------------------------------------------------
 
 --
@@ -32,7 +32,7 @@ CREATE TABLE `administrador` (
   `email` varchar(45) NOT NULL,
   `senha` varchar(20) NOT NULL,
   `nome_completo` varchar(70) CHARACTER SET utf8 NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8_general_ci;
 
 --
 -- Extraindo dados da tabela `administrador`
@@ -52,7 +52,7 @@ CREATE TABLE `biografia` (
   `nome_monitor` varchar(70) NOT NULL,
   `bio` text NOT NULL,
   `foto` varchar(200) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8_general_ci;
 
 --
 -- Extraindo dados da tabela `biografia`
@@ -73,7 +73,7 @@ CREATE TABLE `monitor` (
   `senha_monitor` varchar(20) NOT NULL,
   `nome_completo` varchar(70) CHARACTER SET utf8 NOT NULL,
   `email_administrador` varchar(45) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8_general_ci;
 
 --
 -- Extraindo dados da tabela `monitor`
@@ -99,7 +99,7 @@ CREATE TABLE `redacoes` (
   `nota` varchar(11) DEFAULT NULL,
   `redacao` text CHARACTER SET utf8,
   `comentarios` longtext CHARACTER SET utf8
-) ENGINE=MyISAM DEFAULT CHARSET=latin1;
+) ENGINE=MyISAM DEFAULT CHARSET=utf8_general_ci;
 
 --
 -- Extraindo dados da tabela `redacoes`
@@ -123,7 +123,7 @@ CREATE TABLE `repertorio` (
   `citacao` varchar(70) NOT NULL,
   `id_tipo_repertorio` int(11) NOT NULL,
   `id_tematica` int(11) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8_general_ci;
 
 --
 -- Extraindo dados da tabela `repertorio`
@@ -141,7 +141,7 @@ INSERT INTO `repertorio` (`id_repertorio`, `data_citacao`, `nome_autor`, `citaca
 CREATE TABLE `tematica` (
   `id_tematica` int(11) NOT NULL,
   `nome` varchar(50) CHARACTER SET utf8 NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8_general_ci;
 
 --
 -- Extraindo dados da tabela `tematica`
@@ -163,7 +163,7 @@ INSERT INTO `tematica` (`id_tematica`, `nome`) VALUES
 CREATE TABLE `tipo_repertorio` (
   `id_tipo_repertorio` int(11) NOT NULL,
   `nome` varchar(45) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8_general_ci;
 
 --
 -- Extraindo dados da tabela `tipo_repertorio`
@@ -187,7 +187,7 @@ CREATE TABLE `videos` (
   `link` varchar(80) NOT NULL,
   `descricao` varchar(90) CHARACTER SET utf8 NOT NULL,
   `data_public` int(11) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8_general_ci;
 
 --
 -- Extraindo dados da tabela `videos`
@@ -206,7 +206,7 @@ CREATE TABLE `visitante` (
   `email` varchar(45) NOT NULL,
   `senha` int(20) NOT NULL,
   `nome` varchar(70) CHARACTER SET utf8 NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8_general_ci;
 
 --
 -- Extraindo dados da tabela `visitante`
