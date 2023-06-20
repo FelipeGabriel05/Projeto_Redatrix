@@ -25,7 +25,7 @@
 
             <label for="email"><input type="text" name="email" id="email" required placeholder="Email"></label>
 
-            <label for="senha"><input type="password" name="senha" id="senha" required placeholder="Senha"></label>
+            <label for="senha"><input type="password" name="senha" id="senha" minlength="8" required placeholder="Senha"></label>
             <button type="submit" name="ok" class="sendBtn">Cadastrar</button>
         </form>
     </main>
