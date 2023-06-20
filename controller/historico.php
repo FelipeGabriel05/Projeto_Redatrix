@@ -15,7 +15,7 @@ if(isset($_POST['Adicionar'])){
     }
 
 
-    if($FileType != "jpg") {
+    if($FileType != "jpg" && $FileType != "jpeg" && $FileType != "png") {
         echo "<script>window.alert('Desculpe, somente arquivos em formato jpg são aceitos');</script> <script>location.href='javascript:history.back(1)</script>"; 
         $uploadOkIMG = 0;
     }
