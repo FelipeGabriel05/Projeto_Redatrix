@@ -1,4 +1,11 @@
-<!DOCTYPE html>
+<?php
+    session_start();
+    include "../../model/conexao.php";
+    if(empty($_SESSION['token_monitor'])) {
+        header("location: ../../index.php");
+    } else {
+?>
+        <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -42,13 +49,6 @@
                     </nav>
                 </header>
 
-        <?php
-        session_start();
-        include "../../model/conexao.php";
-        if(empty($_SESSION['token_monitor'])) {
-            header("location: ../../index.php");
-        } else {
-        ?>
         <main class="main_cadastro">
             <form action="../../controller/videos.php" method="post" class="form_cadastro">
                 <h1  class="legend_cad">Inserção de Vídeos</h1>
@@ -64,9 +64,9 @@
                     Cadastrar
                 </button>
             </form>
-            <?php
-            }
-            ?>
     </main>
 </body>
 </html>
+<?php
+    }
+?>
